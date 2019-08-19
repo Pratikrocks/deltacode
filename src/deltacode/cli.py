@@ -51,7 +51,7 @@ def write_json(deltacode, outfile, all_delta_types=False):
         ('delta_stats', deltacode.stats.to_dict()),
         ('deltas', deltas(deltacode, all_delta_types))
     ])
-
+    
     # TODO: add toggle for pretty printing
     simplejson.dump(results, outfile, iterable_as_array=True, indent=2)
     outfile.write('\n')

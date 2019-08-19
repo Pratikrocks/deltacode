@@ -34,7 +34,6 @@ import os
 
 from commoncode import paths
 
-
 def update_from_license_info(delta, unique_categories):
     """
     Increase an 'added' or 'modified' Delta object's 'score' attribute and add
@@ -276,8 +275,8 @@ def get_notice():
     delimiter = '\n\n\n'
     [notice_text, extra_notice_text] = notice_text.split(delimiter, 1)
     extra_notice_text = delimiter + extra_notice_text
-
-    delimiter = '\n\n  '
+    
+    delimiter = '\n\n '
     [notice_text, acknowledgment_text] = notice_text.split(delimiter, 1)
     acknowledgment_text = delimiter + acknowledgment_text
 
