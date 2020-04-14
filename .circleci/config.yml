@@ -6,7 +6,7 @@ jobs:
     build: 
       working_directory: ~/deltacode
       docker: 
-        - image: circleci/python:3.6-jessie
+        - image: circleci/python:2.7
 
       # working_directory: ~/deltacode
       steps: 
