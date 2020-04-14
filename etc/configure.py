@@ -184,7 +184,7 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
         venv = os.path.join(root_dir, tpd, 'virtualenv.py')
         print(os.getcwd())
         print(os.listdir())
-        print(root_dir)
+        print(root_dir , tpd)
         if os.path.exists(venv):
             venv_py = '"' + venv + '"'
             break
