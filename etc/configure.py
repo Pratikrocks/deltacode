@@ -198,6 +198,7 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
     # third parties may be in more than one directory
     vcmd.extend(build_pip_dirs_args(tpp_dirs, root_dir))
     # we create the virtualenv in the root_dir
+    print(vcmd)
     vcmd.append('"' + root_dir + '"')
     call(vcmd, root_dir)
 
