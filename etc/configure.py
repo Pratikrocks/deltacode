@@ -192,15 +192,13 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
         exit(1)
 
     vcmd = [std_python, venv_py, '--never-download']
-    print(vcmd)
     if quiet:
         vcmd += ['--quiet']
     # third parties may be in more than one directory
     vcmd.extend(build_pip_dirs_args(tpp_dirs, root_dir))
-    # we create the virtualenv in the root_dir
-    print(vcmd)
+    # we create the virtualenv in the root_dir\
+    
     vcmd.append('"' + root_dir + '"')
-    print(vcmd)
     call(vcmd, root_dir)
 
 
@@ -223,7 +221,7 @@ def install_3pp(configs, root_dir, tpp_dirs, quiet=False):
         print("* Installing components ...")
     requirement_files = get_conf_files(configs, root_dir, requirements)
     for req_file in requirement_files:
-        pcmd = ['pip', 'install', '--no-allow-external',
+        pcmd = ['pip', 'install', 
                 '--use-wheel', '--no-index', '--no-cache-dir']
         if quiet:
             pcmd += ['--quiet']
