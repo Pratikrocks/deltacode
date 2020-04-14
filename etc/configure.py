@@ -200,6 +200,7 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
     # we create the virtualenv in the root_dir
     print(vcmd)
     vcmd.append('"' + root_dir + '"')
+    print(vcmd)
     call(vcmd, root_dir)
 
 
