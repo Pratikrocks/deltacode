@@ -5,8 +5,8 @@ version: 2.1
 jobs:
     build:  py2.7
       working_directory: ~/deltacode
-      docker: 
-        - image: circleci/python:2.7
+      machine: # executor type
+        image: ubuntu-1604:201903-01 # # recommended linux image - includes Ubuntu 16.04, docker 18.09.3, docker-compose 1.23.1
 
       # working_directory: ~/deltacode
       steps: 
@@ -17,19 +17,19 @@ jobs:
             command: |
               . configure
  
-    build:  py3.6
-      working_directory: ~/deltacod
-      docker: 
-        - image: circleci/python:3.6
+    # build:  py3.6
+    #   working_directory: ~/deltacod
+    #   docker: 
+    #     - image: circleci/python:3.6
 
-      # working_directory: ~/deltacode
-      steps: 
-        - checkout
+    #   # working_directory: ~/deltacode
+    #   steps: 
+    #     - checkout
 
-        - run:
-            name: Installing Dependencies
-            command: |
-              . configure
+    #     - run:
+    #         name: Installing Dependencies
+    #         command: |
+    #           . configure
               
   
 
