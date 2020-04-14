@@ -226,6 +226,7 @@ def create_virtualenv_py2(std_python, root_dir, tpp_dirs=(), quiet=False):
             venv_py = venv
             break
 
+
     # error out if venv_py not found
     if not venv_py:
         print("Configuration Error ... aborting.")
