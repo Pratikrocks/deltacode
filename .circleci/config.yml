@@ -27,7 +27,6 @@ jobs:
       # working_directory: ~/deltacode
       steps: 
         - checkout
-
         - run:
             name: Installing Dependencies
             command: |
