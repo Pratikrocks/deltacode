@@ -182,9 +182,6 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
     venv_py = None
     for tpd in tpp_dirs:
         venv = os.path.join(root_dir, tpd, 'virtualenv.py')
-        print(os.getcwd())
-        print(os.listdir())
-        print(root_dir , tpd)
         if os.path.exists(venv):
             venv_py = '"' + venv + '"'
             break
@@ -195,6 +192,7 @@ def create_virtualenv(std_python, root_dir, tpp_dirs, quiet=False):
         exit(1)
 
     vcmd = [std_python, venv_py, '--never-download']
+    print(vcmd)
     if quiet:
         vcmd += ['--quiet']
     # third parties may be in more than one directory
