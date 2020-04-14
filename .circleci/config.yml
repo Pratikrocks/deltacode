@@ -3,19 +3,19 @@ version: 2.1
 # Use a package of configuration called an orb.
 
 jobs:
-    one:
-      working_directory: ~/deltacode
-      docker: 
-        - image: circleci/python:2.7
+    # one:
+    #   working_directory: ~/deltacode
+    #   docker: 
+    #     - image: circleci/python:2.7
 
-      # working_directory: ~/deltacode
-      steps: 
-        - checkout
+    #   # working_directory: ~/deltacode
+    #   steps: 
+    #     - checkout
 
-        - run:
-            name: Installing Dependencies
-            command: |
-              . configure
+    #     - run:
+    #         name: Installing Dependencies
+    #         command: |
+    #           . configure
  
 
 
@@ -35,5 +35,5 @@ jobs:
 workflows:
     build:
       jobs:   
-        - one
+        # - one
         - two
