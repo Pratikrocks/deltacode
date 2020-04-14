@@ -20,11 +20,11 @@ jobs:
 
 
     two:
-      working_directory: ~/delta
+      # working_directory: ~/delta
       docker: 
         - image: circleci/python:3.6
 
-      # working_directory: ~/deltacode
+      working_directory: ~/deltacode
       steps: 
         - checkout
         - run:
