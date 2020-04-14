@@ -217,9 +217,6 @@ def install_3pp(configs, root_dir, tpp_dirs, quiet=False):
     Install requirements from requirement files found in `configs` with pip,
     using the vendored components in `tpp_dirs`.
     """
-
-
-
     if not quiet:
         print("* Installing components ...")
     requirement_files = get_conf_files(configs, root_dir, requirements)
@@ -231,6 +228,7 @@ def install_3pp(configs, root_dir, tpp_dirs, quiet=False):
         pcmd.extend(pip_dir_args)
         req_loc = os.path.join(root_dir, req_file)
         pcmd.extend(['-r' , '"' + req_loc + '"'])
+        print(1)
         call(pcmd, root_dir)
 
 
@@ -238,6 +236,7 @@ def run_scripts(configs, root_dir, configured_python, quiet=False):
     """
     Run Python scripts and shell scripts found in `configs`.
     """
+
     if not quiet:
         print("* Configuring ...")
     # Run Python scripts for each configurations
