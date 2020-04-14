@@ -9,6 +9,7 @@ set -e
 # change these variables to customize this script locally
 ################################
 # you can define one or more thirdparty dirs, each prefixed with TPP_DIR
+echo "HEY"
 export TPP_DIR="thirdparty"
 
 # default configurations for dev
