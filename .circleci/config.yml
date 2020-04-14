@@ -4,11 +4,11 @@ version: 2.1
 
 jobs:
     build: 
-      working_directory: ~/deltacode
+      working_directory: ~/repo
       docker: 
         - image: circleci/python:3.6-jessie
 
-      working_directory: ~/deltacode
+      # working_directory: ~/deltacode
       steps: 
         - checkout
 
