@@ -3,7 +3,7 @@ version: 2.1
 # Use a package of configuration called an orb.
 
 jobs:
-    build: 
+    build:  py2.7
       working_directory: ~/deltacode
       docker: 
         - image: circleci/python:2.7
@@ -16,7 +16,20 @@ jobs:
             name: Installing Dependencies
             command: |
               . configure
-              . bin/py.test
+ 
+    build:  py3.6
+      working_directory: ~/deltacode
+      docker: 
+        - image: circleci/python:3.6
+
+      # working_directory: ~/deltacode
+      steps: 
+        - checkout
+
+        - run:
+            name: Installing Dependencies
+            command: |
+              . configure
               
   
 
