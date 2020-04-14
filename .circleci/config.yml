@@ -18,7 +18,7 @@ jobs:
               . configure
  
     build:  py3.6
-      working_directory: ~/deltacode
+      working_directory: ~/deltacod
       docker: 
         - image: circleci/python:3.6
 
