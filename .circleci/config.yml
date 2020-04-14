@@ -16,6 +16,6 @@ jobs:
             name: Installing Dependencies
             command: |
               ./configure
-              bin/py.test
+              
   
 
