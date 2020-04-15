@@ -123,7 +123,7 @@ if on_win:
 
 
 # set to True to trace command line executaion
-TRACE = False
+TRACE = True
 
 
 def call(cmd, root_dir):
