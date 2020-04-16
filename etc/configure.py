@@ -232,8 +232,8 @@ def create_virtualenv_py2(std_python, root_dir, tpp_dirs=(), quiet=False):
         exit(1)
 
     vcmd = [quote(std_python), quote(venv_py), '--never-download']
-    if quiet:
-        vcmd += ['-qq']
+    # if quiet:
+    #     vcmd += ['-qq']
     # third parties may be in more than one directory
     vcmd.extend(build_pip_dirs_args(tpp_dirs, root_dir))
     # we create the virtualenv in the root_dir
