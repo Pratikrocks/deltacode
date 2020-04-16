@@ -123,7 +123,7 @@ if on_win:
 
 
 # set to True to trace command line executaion
-TRACE = False
+TRACE = True
 
 
 def call(cmd, root_dir):
@@ -561,11 +561,14 @@ if __name__ == '__main__':
                 print()
         else:
             thirdparty_dirs.append(path)
+            if py2:
+                thirdparty_dirs.append(path + '/Py2')
+            if py3:
+                thirdparty_dirs.append(path + '/Py3')
     if py2:
         create_virtualenv = create_virtualenv_py2
     else:
         create_virtualenv = create_virtualenv_py3
-
     # Finally execute our three steps: venv, install and scripts
     if not os.path.exists(configured_python):
         create_virtualenv(standard_python, root_dir, thirdparty_dirs, quiet=quiet)

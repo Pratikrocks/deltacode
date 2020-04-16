@@ -1,0 +1,85 @@
+jobs :
+
+  - template: etc/ci/azure-linux.yml
+    parameters: 
+      job-name: vm_ubuntu-16.04_3.6
+      image_name: ubuntu-16.04
+      python_versions: ['3.6']
+      test_suites: 
+          deltacode_ubuntu-16.04: |
+            "bin/py.test"
+
+
+  - job: Build_release_archive_py3
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+        - checkout: self
+          fetchDepth: 10
+
+        - task: UsePythonVersion@0
+          inputs:
+              versionSpec: '3.6'
+          displayName: 'Install Python 3.6'
+
+        - script: ./etc/release/release.sh
+          displayName: 'Build installable releases'
+
+  - template: etc/ci/azure-linux.yml
+    parameters: 
+      job-name: vm_ubuntu-16.04_2.7
+      image_name: ubuntu-16.04
+      python_versions: ['2.7']
+      test_suites: 
+          deltacode_ubuntu-16.04: |
+            "bin/py.test"
+
+
+  - job: Build_release_archive_py2
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+        - checkout: self
+          fetchDepth: 10
+
+        - task: UsePythonVersion@0
+          inputs:
+              versionSpec: '2.7'
+          displayName: 'Install Python 2.7'
+
+        - script: ./etc/release/release.sh
+          displayName: 'Build installable releases'
+
+  # - template: etc/ci/azure-linux.yml
+  #   parameters: 
+  #     job-name: vm_ubuntu-18.04
+  #     image_name: ubuntu-18.04
+  #     python_versions: ['3.6']
+  #     test_suites: 
+  #         deltacode_ubuntu-18.04: |
+  #           "bin/py.test"
+  #         release_ubuntu-18.04: |
+  #           "./etc/release/release.sh"
+
+
+  # - template: etc/ci/azure-mac.yml
+  #   parameters: 
+  #     job-name: vm_macos-10.15
+  #     image_name: macos-10.15
+  #     python_versions: ['3.6']
+  #     test_suites: 
+  #         deltacode_macOS-10.15: |
+  #           "bin/py.test"
+  #         release_macOS-10.15: |
+  #           "./etc/release/release.sh"
+
+  # - template: etc/ci/azure-mac.yml
+  #   parameters: 
+  #     job-name: vm_macos-10.14
+  #     image_name: macos-10.14
+  #     python_versions: ['3.6']
+  #     test_suites: 
+  #         deltacode_macOS-10.14: |
+  #           "bin/py.test"
+  #         release_macOS-10.14: |
+  #           "./etc/release/release.sh"    
