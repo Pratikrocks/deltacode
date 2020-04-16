@@ -1,0 +1,13 @@
+environment:
+    matrix:
+        - TEST_SUITE: "py.test "
+        # - TEST_SUITE: "./etc/release/release.sh"
+
+install:
+    - ./configure
+
+build: off
+
+
+test_script:
+    - cmd: "%TEST_SUITE%"
