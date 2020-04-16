@@ -133,8 +133,8 @@ setup(
     keywords=[],
     install_requires=[
         'click',
-        'scancode-toolkit >= 3.0',
         'unicodecsv',
+        'scancode-toolkit'
     ],
 
     entry_points={
