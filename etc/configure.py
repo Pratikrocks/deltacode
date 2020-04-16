@@ -263,8 +263,8 @@ def create_virtualenv_py3(std_python, root_dir, tpp_dirs=(), quiet=False):
         print("* Configuring Python ...")
 
     vcmd = [quote(std_python), '-m', 'venv']
-    if quiet:
-        vcmd += ['-qq']
+    # if quiet:
+    #     vcmd += ['-qq']
     # we create the virtualenv in the root_dir
     vcmd.append(quote(root_dir))
     call(vcmd, root_dir)
@@ -304,8 +304,8 @@ def run_pip(requirements, root_dir, tpp_dirs, quiet=False):
         '--no-index', '--no-cache-dir',
     ]
     pcmd.extend(build_pip_dirs_args(tpp_dirs, root_dir, '--find-links='))
-    if quiet:
-        pcmd += ['-qq']
+    # if quiet:
+    #     pcmd += ['-qq']
 
     pcmd.extend(requirements)
     call(pcmd, root_dir)
