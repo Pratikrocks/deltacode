@@ -30,20 +30,20 @@ matrix:
       sudo: required
       install:
         - ./configure
-        - rm -rf lib64   
+        - rm -rf lib64/ share/
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
       language: python
       python: "3.6"
-      dist: xenial
+      dist: "trusty"
     - os: linux
       sudo: required
       install:
         - ./configure
-        - rm -rf lib64   
+        - rm -rf lib64/ share/   
       env: TEST_SUITE="./etc/release/release.sh"
       language: python
       python: "3.6"
-      dist: xenial
+      dist: "trusty"
     - os: linux
       sudo: required
       install:
