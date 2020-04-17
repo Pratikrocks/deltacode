@@ -33,7 +33,7 @@ matrix:
         - rm -rf lib64   
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
       language: python
-      python: "2.7"
+      python: "3.6"
       dist: xenial
     - os: linux
       sudo: required
@@ -42,7 +42,7 @@ matrix:
         - rm -rf lib64   
       env: TEST_SUITE="./etc/release/release.sh"
       language: python
-      python: "2.7"
+      python: "3.6"
       dist: xenial
     - os: osx
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
