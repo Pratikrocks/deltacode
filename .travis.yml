@@ -30,6 +30,7 @@ env:
 # Set `osx_image: xcode7.3` to pin OSX and Python versions, see here:
 #   https://docs.travis-ci.com/user/osx-ci-environment/
 matrix:
+
   include:
     - os: windows
       language: shell
