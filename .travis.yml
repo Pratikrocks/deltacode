@@ -1,12 +1,12 @@
 # Use a matrix of TEST_SUITE variables to distribute tests to several machines
 # Use a global PYTEST variable to run all of the tests in a uniform fashion
-env:
-  global:
-    - PYTEST="bin/py.test -n 2 -vvs"
+# env:
+#   global:
+#     - PYTEST="bin/py.test -n 2 -vvs"
 
-  matrix:
-    - TEST_SUITE="$PYTEST"
-    - TEST_SUITE="./etc/release/release.sh"
+#   matrix:
+#     - TEST_SUITE="$PYTEST"
+#     - TEST_SUITE="./etc/release/release.sh"
 
 
 # Travis does not offer OSX with arbitrary python versions (like 2.7.13 above)
@@ -31,7 +31,7 @@ matrix:
       install:
         - ./configure
         - rm -rf lib64   
-      env: TEST_SUITE="$PYTEST"
+      env: TEST_SUITE="bin/py.test -n 2 -vvs"
       language: python
       python: "2.7"
       dist: xenial
@@ -45,7 +45,7 @@ matrix:
       python: "2.7"
       dist: xenial
     - os: osx
-      env: TEST_SUITE="$PYTEST"
+      env: TEST_SUITE="bin/py.test -n 2 -vvs"
       language: generic
       python:
       osx_image: xcode7.3
