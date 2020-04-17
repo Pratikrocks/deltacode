@@ -36,14 +36,15 @@ matrix:
       language: generic
       python:
       osx_image: xcode7.3
+      install:
+        - ./configure
     - os: osx
       env: TEST_SUITE="./etc/release/release.sh"
       language: generic
       python:
       osx_image: xcode7.3
-
-install:
-  - ./configure
+      install:
+        - ./configure
 
 script:
   - $TEST_SUITE
