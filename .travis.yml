@@ -30,13 +30,13 @@ matrix:
       sudo: required  
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
       language: python
-      python: "3.6"
+      python: 3.6
       dist: bionic
     - os: linux
       sudo: required
       env: TEST_SUITE="./etc/release/release.sh"
       language: python
-      python: "3.6"
+      python: 3.6
       dist: bionic
     - os: osx
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
