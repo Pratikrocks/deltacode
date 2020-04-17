@@ -1,0 +1,379 @@
+*   [33m2742956[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #156 from Pratikrocks/ChangingDict
+[31m|[m[32m\[m  
+[31m|[m * [33m6a26ff5[m[33m ([m[1;31morigin/ChangingDict[m[33m)[m changed dict to OrderedDict so as to align the scans in correct order and accordingly modified the test cases expected json files
+[31m|[m[31m/[m  
+*   [33m6778882[m Merge pull request #128 from arnav-mandal1234/gsoc_similarity_matching
+[33m|[m[34m\[m  
+[33m|[m * [33m628fea1[m Edits tests
+[33m|[m * [33mde61d43[m Refactors code
+[33m|[m * [33m98db37a[m Refactors code and adds tests
+[33m|[m * [33ma2abce2[m Fixes bugs
+[33m|[m * [33m8c476ac[m Adds new tests
+[33m|[m * [33mf30ed61[m Adds tests files
+[33m|[m * [33m06f7c67[m Edits tests
+[33m|[m * [33m18b70eb[m Fixes minor bug
+[33m|[m * [33m5f77aea[m Edits __init__.py
+[33m|[m * [33mc9a338b[m Basic prototype.
+[33m|[m[33m/[m  
+*   [33m6e20b14[m Merge pull request #129 from nexB/bump-scancode
+[35m|[m[36m\[m  
+[35m|[m * [33m00ba70c[m Bump scancode-toolkit to 3.1.0
+[35m|[m[35m/[m  
+*   [33m89f6d9a[m Merge pull request #124 from nexB/update-csv-script
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m2db8b35[m[33m ([m[1;31morigin/update-csv-script[m[33m)[m Update csv script to output status values
+[1;31m|[m[1;31m/[m  
+*   [33m31dc82f[m Merge pull request #123 from nexB/113-handle-updated-format
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33meb8bc12[m Handle updated ScanCode headers
+[1;33m|[m[1;33m/[m  
+*   [33m14bbc68[m Merge pull request #120 from arnav-mandal1234/stats
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m3185f25[m Adds Stat class and calculates additional statistics Adds Stat class to __init__.py and calculates various percent stats Fixes : https://github.com/nexB/deltacode/issues/5 Signed-off-by: arnav-mandal1234 <arnav.mandal1234@gmail.com>
+* [1;36m|[m   [33m69a607c[m Merge pull request #117 from arnav-mandal1234/status_field
+[31m|[m[1;36m\[m [1;36m\[m  
+[31m|[m [1;36m|[m[1;36m/[m  
+[31m|[m * [33mdce44a1[m Adds 'status' field to  Delta object This adds a new status field in Delta class Fixes - https://github.com/nexB/deltacode/issues/110 Signed-off-by: arnav-mandal1234 <arnav.mandal1234@gmail.com>
+* [32m|[m   [33m57291a7[m Merge pull request #118 from arnav-mandal1234/maxos_travis_support
+[32m|[m[34m\[m [32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+[32m|[m * [33m2291856[m Adds macos build for travis This adds osx support for travis Fixes : https://github.com/nexB/deltacode/issues/78 Signed-off-by: arnav-mandal1234 <arnav.mandal1234@gmail.com>
+[32m|[m[32m/[m  
+*   [33me9cdf8e[m[33m ([m[1;31morigin/106-license-category-dump[m[33m)[m Merge pull request #108 from nexB/105-add-permissive-and-public-domain-categories
+[35m|[m[36m\[m  
+[35m|[m * [33m5ab7d5a[m[33m ([m[1;31morigin/105-add-permissive-and-public-domain-categories[m[33m)[m Report all new license categories for add/modify #105
+[35m|[m[35m/[m  
+*   [33m436fadd[m Merge pull request #104 from nexB/100-update-to-latest-scancode-toolkit-release
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m9e15846[m Add missing python whls (scancode deps) #100
+[1;31m|[m * [33ma9b397a[m Update scancode-toolkit to latest release #100
+[1;31m|[m[1;31m/[m  
+*   [33m4ae267c[m Merge pull request #103 from nexB/93-document-output-format-fields-structure
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m884bebf[m Modify 'deltacode_options' options keys #93
+[1;33m|[m[1;33m/[m  
+* [33me3ff7be[m[33m ([m[1;33mtag: v1.0.0[m[33m, [m[1;31morigin/master[m[33m)[m Update CHANGELOG.rst
+* [33ma639709[m Update README to remove ref to -c command
+*   [33m829d5b8[m Merge pull request #98 from nexB/79-add-deltas-count-field
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m118532d[m Add deltas_count field to JSON output #79
+[1;35m|[m[1;35m/[m  
+*   [33m4182d48[m Merge pull request #97 from nexB/travis-change
+[31m|[m[32m\[m  
+[31m|[m * [33m883bc8b[m Update travis to notify build status over irc
+[31m|[m[31m/[m  
+*   [33mc2af0b2[m Merge pull request #96 from nexB/80-add-version-command
+[33m|[m[34m\[m  
+[33m|[m * [33m5673ba6[m Add --version command #80
+[33m|[m[33m/[m  
+*   [33m09b365b[m Merge pull request #94 from nexB/75-use-json-to-csv-script
+[35m|[m[36m\[m  
+[35m|[m * [33mc5c8600[m Add nexB notice and license header #75
+[35m|[m * [33me791b18[m Refactor json2csv.flatten_deltas() #75
+[35m|[m * [33mcd02176[m Convert to json2csv script #75
+[35m|[m * [33mcba847f[m Save etc/scripts structure #75
+[35m|[m[35m/[m  
+*   [33m7432324[m Merge pull request #92 from nexB/84-improve-scoring-for-added
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33mb0dc286[m Modularize license and copyright diff methods #84
+[1;31m|[m * [33m76b88dc[m Add license/copyright score for 'added' files #84
+[1;31m|[m[1;31m/[m  
+*   [33mbcfd9be[m Merge pull request #89 from nexB/87-add-scanfile-paths
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m07aaa75[m Add ScanCode file paths to JSON output #87
+[1;33m|[m[1;33m/[m  
+*   [33m12ef3f1[m Merge pull request #88 from nexB/refactor
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m5e4757a[m Add docstrings to new diff methods
+[1;35m|[m * [33mfb87c7b[m Limit copyright diff to changes in 'holders'
+[1;35m|[m * [33m0af11f0[m Add combined license/copyright diff tests
+[1;35m|[m * [33m985d443[m Fix syntax in 'factors' assertions
+[1;35m|[m * [33m41212a7[m Add initial tests for determine_copyright_diff()
+[1;35m|[m * [33m4189635[m Add tests for determine_license_diff()
+[1;35m|[m * [33m1c56418[m Add several sample tests
+[1;35m|[m * [33m8d72e29[m move diff logic to utils.py; remove react test
+[1;35m|[m * [33mc35d313[m wip
+[1;35m|[m[1;35m/[m  
+*   [33mb375834[m Merge pull request #86 from nexB/71-account-for-license-category
+[31m|[m[32m\[m  
+[31m|[m * [33m3daeb19[m Finish refactoring category-change detection #71
+[31m|[m * [33mb2bc80f[m Refactor license category detection/scoring #71
+[31m|[m * [33md4183dc[m Account for license categories #71
+[31m|[m[31m/[m  
+*   [33m5459956[m Merge pull request #85 from nexB/83-add-copyright-diff
+[33m|[m[34m\[m  
+[33m|[m * [33m4199bcd[m Remove print statements #82 #83
+[33m|[m * [33m195eb00[m Test copyrights for unusual characters #82 #83
+[33m|[m * [33md2cb79d[m Rename method to 'delta.update()' #82 #83
+[33m|[m * [33m59b502d[m Refactor copyright-related code #82 #83   * Add scoring method to Delta -- Delta.add_score().   * Call new scoring method from DeltaCode.license_diff() and     DeltaCode.copyright_diff().   * Add tests for Delta.add_score().   * Modify score for 'copyright info added'.   * Remove references to copyright authors.   * Add tests cases where a files have large numbers of copyright     holders and statements.   * Add tests cases where a files have unusual characters -- but errors     thrown with French accent characters.
+[33m|[m * [33mf1c9f4d[m Add additional copyright-related tests #83
+[33m|[m * [33mf8f5861[m Add copyright_diff() to DeltaCode object #83
+[33m|[m * [33m00b6e7a[m Add 'Copyright' class #82
+[33m|[m[33m/[m  
+* [33m5338a3c[m Update Manifests
+* [33m5bea52d[m add CONTRIBUTING.rst and update README
+* [33mf0fafd2[m update README
+*   [33m7b56e8f[m Merge pull request #77 from nexB/62-pass-only-score-during-delta-creation
+[35m|[m[36m\[m  
+[35m|[m *   [33md720912[m Merge branch 'develop' into 62-pass-only-score-during-delta-creation
+[35m|[m [1;31m|[m[35m\[m  
+[35m|[m [1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m   
+* [1;31m|[m [33m9794515[m typo fix
+* [1;31m|[m [33mb7f890c[m Update README
+* [1;31m|[m [33m96e4136[m version bump
+* [1;31m|[m [33m4423309[m update version script
+* [1;31m|[m   [33ma87ebdc[m Merge pull request #76 from nexB/69-cleanup
+[1;33m|[m[1;34m\[m [1;31m\[m  
+[1;33m|[m * [1;31m|[m [33mdf8096c[m Add release test to Travis CI build #69 #73
+[1;33m|[m * [1;31m|[m [33mbbb5ec7[m Update setup.py #69
+[1;33m|[m * [1;31m|[m [33m5339fd2[m Update copyright years and documentation #69
+* [1;34m|[m [1;31m|[m   [33mc9e5d88[m Merge pull request #70 from nexB/58-deltacode-script
+[1;35m|[m[1;34m\[m [1;34m\[m [1;31m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [1;31m/[m  
+[1;35m|[m * [1;31m|[m [33m214b0db[m Integrate script into release #58
+[1;35m|[m * [1;31m|[m [33mc407e12[m Add deltacode script #58
+[1;35m|[m[1;35m/[m [1;31m/[m  
+* [1;31m|[m   [33m6da96c7[m Merge pull request #68 from nexB/55-new-scancode
+[31m|[m[32m\[m [1;31m\[m  
+[31m|[m * [1;31m|[m [33mae03fdc[m Update DeltaCode to hand new+old scancode data #55
+[31m|[m * [1;31m|[m [33m768738d[m Remove unused test data #61
+[31m|[m [32m|[m * [33m3132830[m Refactor condition in index_deltas() #62
+[31m|[m [32m|[m * [33m1b11fec[m Remove cutoff_score from license_diff #62
+[31m|[m [32m|[m * [33mb9c0db1[m Refactor scoring structure #62 #63 #64
+[31m|[m [32m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m   
+* [32m|[m   [33mbb58925[m Merge pull request #67 from nexB/61-remove-unused-test-data
+[32m|[m[34m\[m [32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+[32m|[m * [33mbf6f832[m Remove unused test data #61
+* [34m|[m   [33m9044399[m Merge pull request #66 from nexB/59-flatten-deltacode-deltas-field
+[35m|[m[34m\[m [34m\[m  
+[35m|[m [34m|[m[34m/[m  
+[35m|[m * [33mc32250c[m Flatten DeltaCode.deltas field #59
+[35m|[m * [33m09db62c[m Move scoring to 'Delta.determine_score()' #60
+[35m|[m * [33m48490f7[m Clean up comments #52
+[35m|[m * [33m59f769e[m Add 'score' field to CSV output #52
+[35m|[m * [33m03036f0[m Add 'score' attribute to 'Delta' object #52
+[35m|[m[35m/[m  
+*   [33m8de457a[m Merge pull request #57 from nexB/51-add-errors-attribute
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m8af3e52[m Rename error messages #51
+[1;31m|[m * [33m7f4bd0f[m List Scan errors before DeltaCode errors #51
+[1;31m|[m * [33mbb1b4c8[m Modify error-collection structure #51   * Add 'collect_errors()' utility for 'deltacode_errors' attribute.   * Add 'errors' attribute to 'Scan' object, pass message when 'len(files)' != 'self.files_count'.   * Refactor tests.
+[1;31m|[m * [33m9216b62[m Add 'deltacode_errors' field to JSON output #51
+[1;31m|[m * [33mdcee0ce[m Add 'errors' attribute to 'DeltaCode' object #51
+[1;31m|[m[1;31m/[m  
+*   [33m83fe11a[m Merge pull request #56 from nexB/53-convert-readme-to-rst
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m95391f4[m Update MANIFEST files to reflect new filename #53
+[1;33m|[m * [33m73fcc93[m Fix codeblock formatting #53
+[1;33m|[m * [33m2010f21[m Convert README to .rst #53
+[1;33m|[m[1;33m/[m  
+* [33m156629d[m Add AUTHORS.rst; normalize NOTICE filename
+* [33ma86551e[m Revert "remove extraneous NOTICE file"
+* [33md4d7c3e[m remove extraneous NOTICE file
+* [33m85751d6[m remove .bumpversion from Manifest
+*   [33m840da82[m Merge pull request #54 from nexB/48-implement-release-process
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m4d479ff[m Update dev MANIFEST.in #48
+[1;35m|[m * [33m7fcfe9b[m Release script working #48
+[1;35m|[m * [33m37b436f[m Troubleshoot initial release code #48
+[1;35m|[m[1;35m/[m  
+*   [33m900cec1[m Merge pull request #50 from nexB/46-add-notice-to-json-output-file
+[31m|[m[32m\[m  
+[31m|[m * [33m0ddd322[m append commit hash to version string #46
+[31m|[m * [33m6b61cbe[m pass git command args as a tuple #46
+[31m|[m * [33m3240dbf[m Add try/except to setup.py #6 #46
+[31m|[m * [33mb1a7008[m trigger travisci
+[31m|[m * [33md4c03cb[m Test print in setup.py
+[31m|[m * [33m44afafd[m Refactor custom exception etc. #6 #46
+[31m|[m *   [33mafaea80[m Merge branch '6...' into branch '46...' #6 #46
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m * [33m3786e1c[m Refactor custom exception #6
+[31m|[m [33m|[m * [33m78dee85[m Refactor custom exceptions #6
+[31m|[m [33m|[m[31m/[m  
+[31m|[m[31m/[m[33m|[m   
+[31m|[m * [33m9aac840[m Create DeltaCode.options attribute #46
+[31m|[m * [33mce5d649[m Add notice and options, refactor version code #46
+[31m|[m[31m/[m  
+*   [33me7c5385[m Merge pull request #49 from nexB/47-add-more-info
+[35m|[m[36m\[m  
+[35m|[m * [33m2b06692[m Remove errant code block #47
+[35m|[m * [33mf7ae0b5[m Refactor License object and related tests #47
+[35m|[m * [33m0d2f797[m Fix failing tests #47
+[35m|[m * [33mfa37cdc[m Add initial to_dict() additions
+[35m|[m[35m/[m  
+*   [33m7159e40[m Merge pull request #45 from nexB/41-output-changes-only-by-default
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33md5119f6[m Modify command name #41
+[1;31m|[m * [33m7309796[m Limit output to changes by default #41
+[1;31m|[m[1;31m/[m  
+*   [33m4bf4000[m Merge pull request #44 from nexB/37-add-cli-tests
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m36dd66a[m Add no-output-option test #37
+[1;33m|[m * [33m1b262ea[m Refactor cli tests #37
+[1;33m|[m * [33m977139f[m Add initial cli tests #37
+[1;33m|[m[1;33m/[m  
+*   [33m2a5e600[m Merge pull request #42 from nexB/4-handle-moved-files
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m8accf3c[m Convert check_moved() to utility #4
+[1;35m|[m *   [33m1beddbc[m Merge '4-handle-moved-files' into local branch #4
+[1;35m|[m [31m|[m[32m\[m  
+[1;35m|[m [31m|[m * [33me1ba019[m Refactor DeltaCode.determine_moved() #4
+[1;35m|[m * [32m|[m [33m397d92b[m In progress #4
+[1;35m|[m * [32m|[m [33mbe39ca0[m Refactor DeltaCode.determine_moved() #4
+[1;35m|[m [32m|[m[32m/[m  
+[1;35m|[m * [33m82dec05[m Create one moved object per added/removed pair #4
+[1;35m|[m * [33m3ad5793[m Add 'determine_moved()' to 'DeltaCode' class #4
+[1;35m|[m[1;35m/[m  
+* [33m4043e53[m update README.md
+*   [33m9585941[m Merge pull request #40 from nexB/fix-json-output-memory-usage
+[33m|[m[34m\[m  
+[33m|[m * [33mad852ec[m Fix failing tests
+[33m|[m *   [33m6415f1e[m Merge branch 'fix-json-output-memory-usage' of github.com:nexb/deltacode into fix-json-output-memory-usage
+[33m|[m [33m|[m[36m\[m  
+[33m|[m[33m/[m [36m/[m  
+[33m|[m * [33m46a5f12[m Update generate_csv to write_csv
+[33m|[m * [33m3c00c3c[m Use simplejson to output to JSON
+* [36m|[m   [33m9a963f4[m Merge pull request #39 from nexB/29-license-info-added-removed
+[36m|[m[1;32m\[m [36m\[m  
+[36m|[m [1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;32m|[m   
+[36m|[m * [33mc36b72b[m Fine tune '_license_diff()' and related tests #29
+[36m|[m * [33m3690fb3[m Redefine new_licenses and old_licenses #29
+[36m|[m * [33m76131bb[m Refactor '_license_diff()' #29
+[36m|[m * [33m0f97600[m Refactor _license_diff() #29
+[36m|[m * [33mf0ba69c[m Determine whether license info added/removed #29
+[36m|[m[36m/[m  
+*   [33m0c5fe02[m Merge pull request #36 from nexB/30-add-filetype-info-to-output
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m0fb6e7a[m Add info to JSON and CSV output #30
+[1;33m|[m[1;33m/[m  
+* [33m4552d11[m Fix DeltaCode call in cli.py
+*   [33ma00a6d6[m Merge pull request #34 from nexB/28-increment-determine-delta-counter
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33mf5a563d[m Add explanatory messages to assertions #28
+[1;35m|[m * [33m10ab9e6[m Increment determine_delta() counter #28
+[1;35m|[m[1;35m/[m  
+*   [33mc797422[m Merge pull request #33 from nexB/27-check-objects-in-constructor
+[31m|[m[32m\[m  
+[31m|[m * [33m4363b4f[m Remove completed TODO #27
+[31m|[m *   [33mfa1e77e[m Merge branch 'develop' into 27-check-objects-in-constructor #27
+[31m|[m [33m|[m[31m\[m  
+[31m|[m [33m|[m[31m/[m  
+[31m|[m[31m/[m[33m|[m   
+* [33m|[m   [33mc953d27[m Merge pull request #32 from nexB/26-update-docstrings-to-imperative-style
+[35m|[m[36m\[m [33m\[m  
+[35m|[m * [33m|[m [33m8de7ba0[m Update docstrings to imperative style #26
+[35m|[m[35m/[m [33m/[m  
+[35m|[m * [33m67d037e[m Move object checks to class constructors #27
+[35m|[m * [33m3655568[m Add object check to Delta class constructor #27
+[35m|[m[35m/[m  
+*   [33mf06ba66[m Merge pull request #31 from nexB/25-subclass-with-object
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33mef477fb[m Subclass with 'object' #25
+[1;31m|[m[1;31m/[m  
+* [33m64607e2[m updated license_diff function call
+*   [33m9d7a012[m Merge pull request #24 from nexB/23-add-license-and-copyright-headers
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m1c63564[m Add license and copyright headers #23
+[1;33m|[m[1;33m/[m  
+*   [33m4449433[m Merge pull request #22 from nexB/12-license-info-for-modified-files
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m1df53da[m Change variable names #12
+[1;35m|[m * [33me4997af[m Refactor tests, Delta.to_dict() #12
+[1;35m|[m * [33m27e12d5[m Refactor Delta.license_diff() et al. #12
+[1;35m|[m *   [33mc777a52[m Merge branch 'develop' into branch 12-license... #12
+[1;35m|[m [31m|[m[1;35m\[m  
+[1;35m|[m [31m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[31m|[m   
+* [31m|[m   [33m5dd2ab5[m Merge pull request #21 from nexB/16-simplify-deltacode-output
+[33m|[m[34m\[m [31m\[m  
+[33m|[m * [31m|[m [33m5a42628[m Refactor generate_csv() #16
+[33m|[m * [31m|[m [33m054888e[m Refactor JSON- and CSV-output functions #16
+[33m|[m * [31m|[m [33m515c4fd[m Refactor generate_csv() and generate_json() # 16
+[33m|[m * [31m|[m [33me55bcb7[m Simplify DeltaCode output #16
+[33m|[m[33m/[m [31m/[m  
+* [31m|[m   [33m61af30e[m Merge pull request #20 from nexB/19-fix-to-dict
+[35m|[m[36m\[m [31m\[m  
+[35m|[m * [31m|[m [33m017ff7b[m Lower memory usage by removing license to_dict
+[35m|[m * [31m|[m [33me7c0000[m fix failing cli tests #19
+[35m|[m * [31m|[m [33m816e1d2[m update to_dict tests #19
+[35m|[m * [31m|[m [33m689e570[m Update DeltaCode to_dict and tests #19
+[35m|[m * [31m|[m [33me04f626[m Add Delta object to_dict + tests #19
+[35m|[m * [31m|[m [33md18f8a6[m Add Delta object creation tests #19
+[35m|[m * [31m|[m [33mef99647[m Add File object to_dict() tests #19
+[35m|[m * [31m|[m [33m4496a9f[m Add License object to_dict tests #19
+[35m|[m * [31m|[m [33md826cf2[m Add basic License object tests #19
+[35m|[m * [31m|[m [33m7fc8fe8[m Add File object creation test w Licenses #19
+[35m|[m * [31m|[m [33mca42086[m Add File to_dict() tests #19
+[35m|[m[35m/[m [31m/[m  
+[35m|[m *   [33mea4a12a[m Merge branch 'develop' into 12-license-info-for-modified-files
+[35m|[m [1;31m|[m[35m\[m  
+[35m|[m [1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m   
+* [1;31m|[m [33mfeed7cb[m Update thirdparty README.md
+* [1;31m|[m   [33m0b7891b[m Merge pull request #18 from nexB/8-bug-fix
+[1;33m|[m[1;34m\[m [1;31m\[m  
+[1;33m|[m * [1;31m|[m [33mf8376d1[m Fix failing scans due to index collisions #15
+[1;33m|[m * [1;31m|[m [33m69e917a[m fix index tests #15
+[1;33m|[m * [1;31m|[m [33mffb7bef[m Add test case for align + index failure #15
+[1;33m|[m * [1;31m|[m [33m4286104[m handle delta length checks better #15
+[1;33m|[m * [1;31m|[m [33meec1f1b[m saving state...
+[1;33m|[m * [1;31m|[m   [33m10096cf[m fixing merge confilcts #8
+[1;33m|[m [1;35m|[m[1;33m\[m [1;31m\[m  
+[1;33m|[m [1;35m|[m[1;33m/[m [1;31m/[m  
+[1;33m|[m[1;33m/[m[1;35m|[m [1;31m|[m   
+* [1;35m|[m [1;31m|[m   [33m6432d13[m Merge pull request #14 from nexB/12-license-info-for-modified-files
+[31m|[m[32m\[m [1;35m\[m [1;31m\[m  
+* [32m|[m [1;35m|[m [1;31m|[m [33m543f1e9[m Added details to Future TODOs
+[32m|[m [32m|[m * [1;31m|[m [33m89c7161[m Add ecos same file delta tests #8
+[32m|[m [32m|[m * [1;31m|[m [33me0864b5[m Add Scan model test for ecos scans #8
+[32m|[m [32m|[m * [1;31m|[m [33mcef0bb9[m Add failing test case #8
+[32m|[m [32m|[m[32m/[m [1;31m/[m  
+[32m|[m[32m/[m[32m|[m [1;31m|[m   
+* [32m|[m [1;31m|[m [33m11f74f2[m update README.md
+* [32m|[m [1;31m|[m [33mc56789d[m README.md update
+[32m|[m [32m|[m * [33m196fabd[m Add tests, modify 'get_license_keys' #12
+[32m|[m [32m|[m * [33m0b90b44[m Add 'license_changes' category to deltas dict #12
+[32m|[m [32m|[m * [33mff81b1c[m Refactor license_diff, add tests #12
+[32m|[m [32m|[m * [33m7ae4f98[m Add Delta.license_diff and related tests #12
+[32m|[m [32m|[m[32m/[m  
+[32m|[m * [33mb0fe430[m Re-order categories, minor cleanup #12
+[32m|[m * [33mf8fc7dd[m Create OrderedDict and lists in 1 step #12
+[32m|[m * [33m4d4ee15[m Change DeltaCode.deltas from list to OrderedDict #12
+[32m|[m * [33mce03251[m Add docstring, clarify naming of to_dict tests #12
+[32m|[m * [33m12716ce[m Fix 'original_path' and CSV issues #12
+[32m|[m * [33m82f32f0[m Define 'original_path' in File's 'to_dict()' #12
+[32m|[m * [33m811d050[m Removed comments from tests #12
+[32m|[m * [33maa49a60[m Revise License/File constructors, add to_dict() #12
+[32m|[m[32m/[m  
+*   [33m34a3033[m Merge pull request #13 from nexB/2-check-scancode-options
+[33m|[m[34m\[m  
+[33m|[m * [33mccce945[m Add 'options' field checks to other tests #2
+[33m|[m *   [33md907645[m Merge branch 'develop' into 2-check-scancode-options #2
+[33m|[m [35m|[m[33m\[m  
+[33m|[m [35m|[m[33m/[m  
+[33m|[m[33m/[m[35m|[m   
+* [35m|[m [33m1d54003[m Add travis-ci build status icon #1
+* [35m|[m   [33m10a6c4a[m Merge branch '1-travis-ci' into develop
+[1;31m|[m[1;32m\[m [35m\[m  
+[1;31m|[m * [35m|[m [33m094acd8[m added slack notifications #1
+[1;31m|[m * [35m|[m [33mc6a0a09[m travis test commit #1
+[1;31m|[m * [35m|[m [33m794a7df[m Added initial travis-ci config file #1
+[1;31m|[m [1;32m|[m * [33m7d10380[m Check options in incoming ScanCode files #2
+[1;31m|[m [1;32m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;32m|[m   
+* [1;32m|[m [33mb5e92d7[m add missing tcl entry to gitignore #10
+* [1;32m|[m   [33mda8e109[m Merge pull request #11 from nexB/9-refactor-generate-csv
+[1;32m|[m[1;34m\[m [1;32m\[m  
+[1;32m|[m [1;34m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m   
+[1;32m|[m * [33m95148ea[m Refactor generate_csv() using ternary operators #9
+[1;32m|[m[1;32m/[m  
+* [33mc3872cf[m updated README.md
+* [33m551f231[m Deltacode migration from spats
+* [33m4a6f2a8[m Initial commit
