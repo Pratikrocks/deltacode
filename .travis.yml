@@ -1,8 +1,3 @@
-language: python
-
-python:
-  - 2.7.13
-
 # Use a matrix of TEST_SUITE variables to distribute tests to several machines
 # Use a global PYTEST variable to run all of the tests in a uniform fashion
 env:
@@ -31,6 +26,24 @@ env:
 #   https://docs.travis-ci.com/user/osx-ci-environment/
 matrix:
   include:
+    - os: linux
+      sudo: required
+      install:
+        - ./configure
+        - rm -rf lib64   
+      env: TEST_SUITE="$PYTEST"
+      language: python
+      python: "2.7"
+      dist: xenial
+    - os: linux
+      sudo: required
+      install:
+        - ./configure
+        - rm -rf lib64   
+      env: TEST_SUITE="./etc/release/release.sh"
+      language: python
+      python: "2.7"
+      dist: xenial
     - os: osx
       env: TEST_SUITE="$PYTEST"
       language: generic
