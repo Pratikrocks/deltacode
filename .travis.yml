@@ -28,21 +28,21 @@ matrix:
   include:
     - os: linux
       sudo: required
-      language: python
-      python: "3.6"
       install:
         - ./configure
         - rm -rf lib64   
       env: TEST_SUITE="bin/py.test -n 2 -vvs"
+      language: python
+      python: "3.6"
       dist: xenial
     - os: linux
       sudo: required
-      language: python
-      python: "3.6"
       install:
         - ./configure
         - rm -rf lib64   
       env: TEST_SUITE="./etc/release/release.sh"
+      language: python
+      python: "3.6"
       dist: xenial
     - os: linux
       sudo: required
