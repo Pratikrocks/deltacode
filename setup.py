@@ -133,7 +133,8 @@ setup(
     keywords=[],
     install_requires=[
         'click',
-        'scancode-toolkit >= 3.0',
+        'scancode-toolkit==3.1.0;python_version=="2.7"',
+        'scancode-toolkit==3.1.2;python_version=="3.6"',
         'unicodecsv',
     ],
 
