@@ -780,7 +780,7 @@ class TestDeltacode(FileBasedTesting):
     def test_score_single_copyright_change(self):
         new_scan = self.get_test_loc('deltacode/score_single_copyright_change_new.json')
         old_scan = self.get_test_loc('deltacode/score_single_copyright_change_old.json')
-        print(new_scan, old_scan)
+        # print(new_scan, old_scan)
         options = OrderedDict([
             ('--all-delta-types', False)
         ])
@@ -788,6 +788,8 @@ class TestDeltacode(FileBasedTesting):
         deltacode_object = DeltaCode(new_scan, old_scan, options)
 
         deltas_object = deltacode_object.deltas
+        # for d in deltas_object:
+        #     print("sha1", " ",d.old_file.sha1)
         assert [d.old_file.sha1 for d in deltas_object if d.old_file.path == 'path.txt'] == ['b']  
         assert [d.new_file.sha1 for d in deltas_object if d.new_file.path == 'path.txt'] == ['b_modified']
 

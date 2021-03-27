@@ -220,13 +220,13 @@ def align_trees(a_files, b_files):
     """
     # we need to find one uniquly named file that exists in 'a' and 'b'.
     a_names = defaultdict(list)
-    for a_file in a_files:
-        a_names[a_file[0].name].append(a_file)
+    for i,a_file in a_files.items():
+        a_names[a_file.name].append(a_file)
     a_uniques = {k: v[0] for k, v in a_names.items() if len(v) == 1}
 
     b_names = defaultdict(list)
-    for b_file in b_files:
-        b_names[b_file[0].name].append(b_file)
+    for i,b_file in b_files.items():
+        b_names[b_file.name].append(b_file)
     b_uniques = {k: v[0] for k, v in b_names.items() if len(v) == 1}
 
     candidate_found = False
@@ -234,18 +234,18 @@ def align_trees(a_files, b_files):
         if a_name not in b_uniques:
             continue
         b_unique = b_uniques.get(a_name)
-        if a_unique and a_unique[0].sha1 == b_unique[0].sha1:
+        if a_unique and a_unique.sha1 == b_unique.sha1:
             candidate_found = True
             break
 
     if not candidate_found:
         raise AlignmentException
-    if a_unique[0].path == b_unique[0].path:
+    if a_unique.path == b_unique.path:
         return 0, 0
 
-    common_suffix, common_segments = paths.common_path_suffix(a_unique[0].path, b_unique[0].path)
-    a_segments = len(paths.split(a_unique[0].path))
-    b_segments = len(paths.split(b_unique[0].path))
+    common_suffix, common_segments = paths.common_path_suffix(a_unique.path, b_unique.path)
+    a_segments = len(paths.split(a_unique.path))
+    b_segments = len(paths.split(b_unique.path))
 
     return a_segments - common_segments, b_segments - common_segments
 
@@ -260,17 +260,17 @@ def fix_trees(a_files, b_files):
     a_offset, b_offset = align_trees(a_files, b_files)
     original_path_a = OrderedDict()
     original_path_b  = OrderedDict()
-    for a_file in a_files:
-        original_path = a_file[0].path
-        a_file[1] = a_file[0].path
-        a_file[0].path = '/'.join(paths.split(a_file[0].path)[a_offset:])
-        original_path_a[a_file[0].path] = original_path
-    for b_file in b_files:
-        original_path = b_file[0].path
-        b_file[1] = b_file[0].path
-        b_file[0].path = '/'.join(paths.split(b_file[0].path)[b_offset:])
-        original_path_b[b_file[0].path] = original_path
-    return original_path_a , original_path_b
+    for i,a_file in a_files.items():
+        original_path = a_file.path
+        # a_file[1] = a_file[0].path
+        i = '/'.join(paths.split(a_file.path)[a_offset:])
+        # original_path_a[a_file[0].path] = original_path
+    for i,b_file in b_files.items():
+        # original_path = b_file[0].path
+        # b_file[1] = b_file[0].path
+        i = '/'.join(paths.split(b_file.path)[b_offset:])
+        # original_path_b[b_file[0].path] = original_path
+    # return original_path_a , original_path_b
 
 def index_files(files ,index_key = 'path'):
     """
@@ -280,15 +280,15 @@ def index_files(files ,index_key = 'path'):
     currently catch the AttributeError exception.
     """
     index = {}
-    for f in files:
+    for i,k in files.items():
 
-        key = str(getattr(f[0], index_key))
+        key = str(getattr(k, index_key))
 
         if index.get(key) is None:
             index[key] = []
-            index[key].append(f[0])
+            index[key].append(k)
         else:
-            index[key].append(f[0])
+            index[key].append(k)
     return index
 
 def check_moved(added_sha1, added_deltas, removed_sha1, removed_deltas):

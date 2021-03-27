@@ -51,8 +51,8 @@ class DeltaCode(object):
         self.codebase1 = None
         self.codebase2 = None
 
-        self.new_files = [] # a list of [[new file1:Original path],[new file2:Original Path],...]
-        self.old_files = [] # a list of [[old file1:Original path],[old file2:Original Path],...]
+        self.new_files = dict() # a list of [[new file1:Original path],[new file2:Original Path],...]
+        self.old_files = dict() # a list of [[old file1:Original path],[old file2:Original Path],...]
         self.new_files_fingerprint = dict() # map of { {new_file1:fingerprint},{new_file2:fingerprint},...} it will be needed when we need the fingerprints
         self.old_files_fingerprint = dict() # map of { {old_file1:fingerprint},{old_file2:fingerprint},...}
         self.new_files_original_path = dict() #this keeps a map of the path of file with respect to original path 
@@ -81,8 +81,8 @@ class DeltaCode(object):
             self.copyright_diff()
             self.stats.calculate_stats()
             self.similarity()
-            # Sort deltas by score, descending, i.e., high > low, and then by
-            # factors, alphabetically.  Run the least significant sort first.
+            # # Sort deltas by score, descending, i.e., high > low, and then by
+            # # factors, alphabetically.  Run the least significant sort first.
             self.deltas.sort(key=lambda Delta: Delta.factors, reverse=False)
             self.deltas.sort(key=lambda Delta: Delta.score, reverse=True)
  
@@ -98,11 +98,12 @@ class DeltaCode(object):
         """
         resources = codebase.walk_filtered(topdown=True)
         for i,obj in enumerate(resources):
-            files.append([obj,''])
+            files[obj.path] = obj
             try :
                 fingerprint[obj.path] = obj.fingerprint
             except AttributeError:
                 fingerprint[obj.path] = None
+        
 
     def align_scans(self):
         """
@@ -112,8 +113,9 @@ class DeltaCode(object):
         which calls utils.align_trees().
         """
         try:
-            self.new_files_original_path , self.old_files_original_path = utils.fix_trees(self.new_files, self.old_files)
+            utils.fix_trees(self.new_files, self.old_files)
         except utils.AlignmentException:
+            print("******")
             for f in self.new_files:
                 f[1] = f[0].path
             for f in self.old_files:
@@ -169,15 +171,16 @@ class DeltaCode(object):
                 try:
                     delta_old_files = old_index[path]
                 except KeyError:
+                    print()
                     delta = Delta(100, new_file, None)
                     delta.status = 'added'
                     self.stats.num_added += 1
                     self.deltas.append(delta)
                     continue
 
-                # at this point, we have a delta_old_file.
-                # we need to determine wheather this is identical,
-                # or a modification.
+    #             # at this point, we have a delta_old_file.
+    #             # we need to determine wheather this is identical,
+    #             # or a modification.
                 for f in delta_old_files:
                     # TODO: make sure sha1 is NOT empty
                     if new_file.sha1 == f.sha1:
@@ -192,7 +195,7 @@ class DeltaCode(object):
                         self.stats.num_modified += 1
                         self.deltas.append(delta)
 
-        # now time to find the added.
+    #     # now time to find the added.
         for path, old_files in old_index.items():
             for old_file in old_files:
                 if old_file.type != 'file':
@@ -210,6 +213,7 @@ class DeltaCode(object):
                     self.deltas.append(delta)
                     continue
 
+        print(self.deltas)      
         # make sure everything is accounted for
         if new_visited != self.codebase1.compute_counts()[0]:
             self.errors.append(
@@ -426,7 +430,9 @@ class Delta(object):
             return all_licenses
 
     def file_to_dict(self,deltacode, new_file = True):
+        
         if new_file==False and self.old_file :
+            # print(deltacode.old_files.get(self.old_file.path, self.old_file.path))
             return OrderedDict([
                 ("path",self.old_file.path),
                 ("type",self.old_file.type),
@@ -434,13 +440,14 @@ class Delta(object):
                 ("size",self.old_file.size),
                 ("sha1",self.old_file.sha1),
                 ("fingerprint",deltacode.old_files_fingerprint.get(self.old_file.path,"")),
-                ("original_path",deltacode.old_files_original_path.get(self.old_file.path, self.old_file.path)),
+                ("original_path",deltacode.old_files.get(self.old_file.path, self.old_file.path).path),
                 # since license itself has many sub fields so we obtain it from another utility function
                 ("licenses",self.licenses_to_dict(self.old_file)),
                 # since copyright itself has many sub fields so we obtain it from another utility function
                 ("copyrights",self.copyrights_to_dict(self.old_file))       
             ])
         elif new_file and self.new_file:
+            # print(deltacode.new_files.get(self.new_file.path, self.new_file.path))
             return OrderedDict([
                 ("path",self.new_file.path),
                 ("type",self.new_file.type),
@@ -448,7 +455,7 @@ class Delta(object):
                 ("size",self.new_file.size),
                 ("sha1",self.new_file.sha1),
                 ("fingerprint",deltacode.new_files_fingerprint.get(self.new_file.path,"")),
-                ("original_path",deltacode.new_files_original_path.get(self.new_file.path, self.new_file.path)),
+                ("original_path",deltacode.new_files.get(self.new_file.path, self.new_file.path).path),
                 # since license itself has many sub fields so we obtain it from another utility function
                 ("licenses",self.licenses_to_dict(self.new_file)),
                 # since copyright itself has many sub fields so we obtain it from another utility function
